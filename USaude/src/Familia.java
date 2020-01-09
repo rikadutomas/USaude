@@ -3,13 +3,12 @@ import java.util.Map;
 
 public class Familia {
 
-    String nomeFamilia;
-    Map<String, Utente> hashFamilia;
-
+    private String nomeFamilia;
+    private Map<String, Utente> hashFamilia;
+    
     public Familia(String n){
         nomeFamilia = n;
         hashFamilia = new HashMap<String, Utente>();
-
     }
 
     public void adicionarMembro(Utente m) {

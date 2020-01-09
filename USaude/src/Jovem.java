@@ -5,7 +5,7 @@ public class Jovem extends Utente{
 		setNome(nome);
 		setEtaria("Jovem");
 	}
-
+	
 	public String getEtaria() {
 		return etaria;
 	}

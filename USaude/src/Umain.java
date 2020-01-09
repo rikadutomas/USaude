@@ -1,12 +1,45 @@
 // import java.util.Set;
+import java.util.Collection;
 import java.util.TreeMap;
+import java.util.Vector;
 public class Umain implements Uinterface{
 	
 	Utente utente = null;
 	Familia familia = null;
+	Profissional profissional = null;
 	
 	TreeMap<String,Utente> treeUtente = new TreeMap<String,Utente>();
-	TreeMap<String, Familia> treeFamilia = new TreeMap<String,Familia>();
+	TreeMap<String,Familia> treeFamilia = new TreeMap<String,Familia>();
+	TreeMap<String,Profissional> treeProfissional = new TreeMap<String,Profissional>();
+
+	public void registarProfissional(String categoria, String nome) {
+		if(treeProfissional.containsKey(nome)) {
+			System.out.println("Profissional existente");
+		}
+		else {
+			if (categoria.equals("Medicina")) {
+				Profissional profissional = new Medicina(nome);
+				treeProfissional.put(nome, profissional);
+				System.out.println("Profissional registado com sucesso.");
+				
+				
+			}
+			else if (categoria.equals("Enfermagem")) {
+					Profissional profissional = new Enfermagem(nome);
+					treeProfissional.put(nome, profissional);
+					System.out.println("Profissional registado com sucesso.");
+			}
+			else if (categoria.equals("Auxiliar")) {
+				Profissional profissional = new Auxiliar(nome);
+				treeProfissional.put(nome, profissional);
+				System.out.println("Profissional registado com sucesso.");
+			}
+			else {
+				System.out.println("Categoria inexistente.");
+			}
+		}
+				
+	}
 	
 	public void registarUtente(String nome, String etaria) {
 		if (treeUtente.containsKey(nome)) {
@@ -30,19 +63,45 @@ public class Umain implements Uinterface{
 				System.out.println("Utente registado com sucesso.");
 			}	
 			else {
-				System.out.println("Faixa etária inexistente.");
+				System.out.println("Faixa etaria inexistente.");
 			}
 		}
 	}
-
 	
 	public void registarFamilia(String nomeFamilia) {
-		familia.nomeFamilia = nomeFamilia;
+		if (treeFamilia.containsKey(nomeFamilia)){
+			System.out.println("Familia existente.");
+		}
+		else {
+			Familia familia = new Familia(nomeFamilia);
+			treeFamilia.put(nomeFamilia, familia);
+			System.out.println("Familia registada com sucesso.");
+		}		
 	}
-
 	
-	public void associarFamilia(Utente nome, String nomeFamilia) {
-		familia.adicionarMembro(nome);
+	public void associarFamilia(String nome,String nomeFamilia) {
+		if (treeUtente.containsKey(nome)){
+			if (treeFamilia.containsKey(nomeFamilia)) {
+				Vector v = new Vector((Collection) treeFamilia.get(nomeFamilia));
+				
+				Vector V = 
+					
+					
+					
+				}
+				else {
+					System.out.println("Utente pertence a familia.");
+				}
+			}
+			else {
+				System.out.println("Familia inexistente.");
+			}
+		}
+		else {
+			System.out.println("Utente inexistente.");
+		}
+		
 	}
+	
 
 }
