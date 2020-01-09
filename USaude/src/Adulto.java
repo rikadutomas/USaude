@@ -1,4 +1,4 @@
-
+//
 public class Adulto extends Utente{
 	
 	public Adulto(String nome) {

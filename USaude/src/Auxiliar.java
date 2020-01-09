@@ -1,4 +1,4 @@
-
+//
 public class Auxiliar extends Profissional {
 
 	public Auxiliar(String nome) {

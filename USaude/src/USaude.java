@@ -39,6 +39,7 @@ public class USaude {
 		uinterface.registarFamilia("Ferreira");
 		uinterface.registarFamilia("Francisco");
 		uinterface.associarFamilia("Joao", "Tomas");
+		uinterface.associarFamilia("Joao", "Tomas");
 	}
 
 }

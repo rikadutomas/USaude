@@ -1,4 +1,4 @@
-
+//
 public class Enfermagem extends Profissional {
 
 	public Enfermagem(String nome) {
