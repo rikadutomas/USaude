@@ -88,7 +88,7 @@ public class Umain implements Uinterface{
 				Vector<Familia> v = new Vector<Familia>();
 				Familia f = v.add(treeFamilia.get(nomeFamilia));
 				
-				
+//				Iterador
 				Iterator i = v.iterator();
 				while (i.hasNext()) {
 					System.out.println(i);
