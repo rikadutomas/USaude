@@ -2,6 +2,9 @@
 import java.util.Collection;
 import java.util.TreeMap;
 import java.util.Vector;
+import java.util.Iterator;
+
+
 public class Umain implements Uinterface{
 	
 	Utente utente = null;
@@ -82,16 +85,15 @@ public class Umain implements Uinterface{
 	public void associarFamilia(String nome,String nomeFamilia) {
 		if (treeUtente.containsKey(nome)){
 			if (treeFamilia.containsKey(nomeFamilia)) {
-				Vector v = new Vector((Collection) treeFamilia.get(nomeFamilia));
+				Vector<Familia> v = new Vector<Familia>();
+				Familia f = v.add(treeFamilia.get(nomeFamilia));
 				
-				Vector V = 
-					
-					
-					
+				
+				Iterator i = v.iterator();
+				while (i.hasNext()) {
+					System.out.println(i);
 				}
-				else {
-					System.out.println("Utente pertence a familia.");
-				}
+
 			}
 			else {
 				System.out.println("Familia inexistente.");

@@ -35,7 +35,10 @@ public class USaude {
 		uinterface.registarProfissional("Medicina","Ismael");
 		uinterface.registarProfissional("Enfermagem","Paulo");
 		uinterface.registarProfissional("Auxiliar","Anibal");
-		
+		uinterface.registarFamilia("Tomas");
+		uinterface.registarFamilia("Ferreira");
+		uinterface.registarFamilia("Francisco");
+		uinterface.associarFamilia("Joao", "Tomas");
 	}
 
 }
