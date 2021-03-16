@@ -1,4 +1,4 @@
-
+//
 public class Medicina extends Profissional{
 
 	public Medicina(String nome) {
